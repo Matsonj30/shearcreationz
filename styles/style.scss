@@ -43,6 +43,35 @@ $black: #111111;
     display: flex;
     justify-content: center;
 }
+
+.titleSection{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .text{
+        :first-child{
+            color: $accentColor;
+        }
+        h1{
+            display: inline;
+            color: $black;
+            font-family: "bold";
+            font-size: 56px;
+        }
+
+    }
+    img{
+        width: 175px;
+    }
+    p{
+        width: 500px;
+        text-align: center;
+        padding-top: 30px;
+    }
+}
+
 .buttonDark{
     width: 140px;
     height: 50px;
@@ -50,7 +79,8 @@ $black: #111111;
     background-color: transparent;
     border-radius: 7px;
     border: 2px solid $black;
-    font-size: 20px;
+    font-size: 18px;
+    letter-spacing: 1px
 }
 .buttonRed{
     @extend .buttonDark;
@@ -64,6 +94,7 @@ $black: #111111;
 
 //-------------------------------IMPORTS---------------------------------
 @import "index/_hero.scss";
+@import "index/_services.scss";
 @import "_navigationMenu.scss"
 
 //-------------------------------IMPORTS---------------------------------

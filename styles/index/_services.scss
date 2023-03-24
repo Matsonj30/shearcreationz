@@ -1,0 +1,87 @@
+.services{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    .servicesSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .servicesList{
+            max-width: 600px;
+            .service{
+                display: flex;
+                align-items: center;
+                padding-top: 30px;
+                width: 500px;
+                margin: 25px 50px;
+                .serviceDescription{
+                    h3{
+                        font-size: 25px;
+                        font-family: "bold";
+                    }
+                    p{
+                        max-width: 350px;
+                    }
+                }
+                img{
+                    width: 50px;
+                    height: 50px;
+                    padding-right: 30px;
+                }
+                
+            }
+        }
+        
+    }
+    button{
+        margin-top: 30px;
+    }
+    .gallerySection{
+        width: 710px;
+        display: grid;
+        grid-template-columns: 350px 350px;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "redbox hair1"
+        "hair2 hair1"
+        "hair2 nail1";
+        gap: 8px;
+        .redBox{
+            background-color: $accentColor;
+            width: 350px;
+            height: 300px;
+            border-radius: 73px 0px 0px 0px;
+            grid-area: redbox;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h2{
+                font-size: 50px;
+                font-family: "bold";
+                color: $primaryColor;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        :nth-child(2){
+            width: 350px;
+            height: 540px;
+            grid-area: hair1;
+        }
+        :nth-child(3){
+            width: 350px;
+            height: 580px;
+            border-radius: 0px 0px 0px 73px;
+            grid-area: hair2;
+        }
+        :nth-child(4){
+            width: 350px;
+            height: 340px;
+            grid-area: nail1;
+        }
+    }
+
+
+}

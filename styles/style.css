@@ -20,6 +20,32 @@
   justify-content: center;
 }
 
+.titleSection {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.titleSection .text :first-child {
+  color: #C2272D;
+}
+.titleSection .text h1 {
+  display: inline;
+  color: #111111;
+  font-family: "bold";
+  font-size: 56px;
+}
+.titleSection img {
+  width: 175px;
+}
+.titleSection p {
+  width: 500px;
+  text-align: center;
+  padding-top: 30px;
+}
+
 .buttonDark, .buttonRed {
   width: 140px;
   height: 50px;
@@ -27,7 +53,8 @@
   background-color: transparent;
   border-radius: 7px;
   border: 2px solid #111111;
-  font-size: 20px;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .buttonRed {
@@ -208,6 +235,84 @@
     padding-left: 335px;
   }
 }
+.services {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.services .servicesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services .servicesSection .servicesList {
+  max-width: 600px;
+}
+.services .servicesSection .servicesList .service {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  width: 500px;
+  margin: 25px 50px;
+}
+.services .servicesSection .servicesList .service .serviceDescription h3 {
+  font-size: 25px;
+  font-family: "bold";
+}
+.services .servicesSection .servicesList .service .serviceDescription p {
+  max-width: 350px;
+}
+.services .servicesSection .servicesList .service img {
+  width: 50px;
+  height: 50px;
+  padding-right: 30px;
+}
+.services button {
+  margin-top: 30px;
+}
+.services .gallerySection {
+  width: 710px;
+  display: grid;
+  grid-template-columns: 350px 350px;
+  grid-template-rows: auto;
+  grid-template-areas: "redbox hair1" "hair2 hair1" "hair2 nail1";
+  gap: 8px;
+}
+.services .gallerySection .redBox {
+  background-color: #C2272D;
+  width: 350px;
+  height: 300px;
+  border-radius: 73px 0px 0px 0px;
+  grid-area: redbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services .gallerySection .redBox h2 {
+  font-size: 50px;
+  font-family: "bold";
+  color: #fafafa;
+  width: 100%;
+  text-align: center;
+}
+.services .gallerySection :nth-child(2) {
+  width: 350px;
+  height: 540px;
+  grid-area: hair1;
+}
+.services .gallerySection :nth-child(3) {
+  width: 350px;
+  height: 580px;
+  border-radius: 0px 0px 0px 73px;
+  grid-area: hair2;
+}
+.services .gallerySection :nth-child(4) {
+  width: 350px;
+  height: 340px;
+  grid-area: nail1;
+}
+
 .navigationBar {
   height: 100px;
   width: 100%;
