@@ -39,7 +39,10 @@ $black: #111111;
     font-family: "regular";
     color: $black;
 }
-
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
 .buttonDark{
     width: 140px;
     height: 50px;

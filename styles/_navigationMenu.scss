@@ -4,24 +4,6 @@
     position: relative; //without position, we cant mess with overflow
     display: flex;
     align-items:center;
-    
-
-     
-    img{
-        height: 75px;
-        padding-left: 200px;
-        transform: translateY(-3px);        
-    }
-
-    .hideOverflow{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 200px;
-        height: 100vh;
-        overflow-x: hidden;
-        z-index: 2;
- 
 
         #menu{
             position: fixed;
@@ -110,52 +92,59 @@
             transform: rotate(-45deg) translate(-5px, 4px);
         }
     }
-}
+
 
 @media(min-width: 1000px){
     .navigationBar{
-     
-       flex-direction: row;
-       align-items: center;
-
-       z-index: 2;
-        .hideOverflow{
-            overflow: visible;
-            height: fit-content;
-            top: auto;
+        max-width: 1800px;
+        z-index: 2;
+        justify-content: center;
+        #menu{
+            background-color: transparent;
+            transform: translateX(150px);
             position: relative;
-            #menu{
-                flex-direction: row;
-                background-color: transparent;
-                transform: translate(300px, -5px) !important;
-                position: relative;
-                width: 600px;
-                align-items: center;
-                height: fit-content;
-                
-                ul{
-                    padding-top: 0px;
+            width: 600px;
+            align-items: center;
+            height: fit-content;
+            
+            ul{
+                padding-top: 0px;
+                text-align: center;
+                display: flex;
+                li{
                     text-align: center;
-                    display: flex;
-                    li{
-                        text-align: center;
-                        width: fit-content;
-                        padding-left: 50px;
-                        padding-bottom: 0px;
-                        a{
-                            font-size: 20px;
-                        }
+                    width: fit-content;
+                    padding-left: 50px;
+                    padding-bottom: 0px;
+                    a{
+                        font-size: 20px;
                     }
-                   
                 }
-            }   
-       
-        }
+                
+            }
+        }   
+    
+    }
         .hamburgerMenu{
             display: none;
         }   
     }
     
    
-    
+
+@media (min-width:1300px){
+    .navigationBar{
+        #menu{
+
+        }
+    }
+}
+
+
+@media (min-width:1600px){
+    .navigationBar{
+        #menu{
+
+        }
+    }
 }

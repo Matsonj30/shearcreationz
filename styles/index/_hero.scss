@@ -1,11 +1,10 @@
 .hero{
     background-color: $secondaryColor;
-    height: 600px;
+    height: 665px;
     width: 100%;
-    position: absolute;
-    top: 0;
+    transform: translateY(-100px);
+    overflow-x: hidden;
     
-
     .heroInfo{
         display: flex;
         flex-direction: column;
@@ -40,18 +39,11 @@
     }
     .model{
         display: none;
-        position: absolute;
-        height: 500px;
-        right: 600px;
-        bottom: 0;
-        z-index: 2;
+   
     }
     .vector{
         display: none;
-        top: 0;
-        height: 100%;
-        right: 300px;
-        z-index: 1;
+
     }
 }
 
@@ -85,10 +77,11 @@
 
 @media(min-width: 850px){
     .hero{
-
+       
         .heroInfo{
             padding-left: 150px;
             width: 600px;
+            margin-top: 50px;
             h3{
                 font-size: 22px;
             }
@@ -107,7 +100,118 @@
             }
         }
     
+        .logo{
+            height: 80px;
+            padding-left: 135px;
+            padding-top: 15px;
+        }
 
+    }
+}
+
+
+@media(min-width: 850px){
+    .hero{
+       
+        .heroInfo{
+            padding-left: 150px;
+            width: 600px;
+            margin-top: 50px;
+            h3{
+                font-size: 22px;
+            }
+            h1{
+                width: 650px;
+                font-size: 74px;
+                line-height: 65px;
+            }
+            p{
+                width: 400px;
+                padding-top: 15px;
+                font-size: 18px;
+            }
+            .buttons{
+                padding-top: 15px;
+            }
+        }
+    
+        .logo{
+            height: 80px;
+            padding-left: 135px;
+            padding-top: 15px;
+        }
+
+    }
+}
+
+
+@media(min-width: 1300px){
+    .hero{
+       
+        .model{
+            display: block;
+            position: absolute;
+            height: 500px;
+            right: 300px;
+            bottom: 0;
+            z-index: 2;
+        }
+        .vector{
+            display: block;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            right: 0px;
+            z-index: 1;
+        }
+
+    }
+}
+
+@media(min-width: 1650px){
+    .hero{
+        
+        .model{
+            left: 950px;
+            bottom: 0px;
+
+        }
+        .vector{
+  
+            top: 0px;
+            left: 1200px;
+        }
+
+    }
+}
+
+@media(min-width: 1800px){
+    .hero{
+        .heroInfo{
+            padding-left: 350px;
+            margin-top: 50px;
+            h3{
+                font-size: 24px;
+            }
+            h1{
+                width: 670px;
+                font-size: 88px;
+                line-height: 80px;
+            }
+            p{
+                width: 400px;
+                padding-top: 20px;
+                font-size: 18px;
+            }
+            .buttons{
+                padding-top: 20px;
+            }
+        }
+        .logo{
+            padding-left: 335px;
+        }
+
+        
 
     }
 }
