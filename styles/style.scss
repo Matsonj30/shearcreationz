@@ -3,15 +3,16 @@ $primaryColor: #fafafa;
 $primaryDark:  #fafafa;
 $primaryLight: #FAFAFA;
 
-$secondaryColor: #C2272D;
+$secondaryColor: #EDE9E9;
 $secondaryColorDark: #202020;
 $secondaryColorLight: #1E1F26;
 
-$accentColor: #2cddce;
+$accentColor: #C2272D;
 $accentColorDark: #272021;
 $accentColorLight: #77623b;;
 
 $white:  #FAFAFA;
+$black: #111111;
 //-------------------------------COLORS---------------------------------
 
 
@@ -35,15 +36,31 @@ $white:  #FAFAFA;
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins";
-
+    font-family: "regular";
+    color: $black;
 }
-  
+
+.buttonDark{
+    width: 140px;
+    height: 50px;
+    font-family: "bold";
+    background-color: transparent;
+    border-radius: 7px;
+    border: 2px solid $black;
+    font-size: 20px;
+}
+.buttonRed{
+    @extend .buttonDark;
+    border: 0px;
+    background-color: $accentColor;
+    color: $primaryColor;
+}
 
 //-------------------------------MULTI PURPOSE CSS---------------------------------
 
 
 //-------------------------------IMPORTS---------------------------------
-
+@import "index/_hero.scss";
+@import "_navigationMenu.scss"
 
 //-------------------------------IMPORTS---------------------------------

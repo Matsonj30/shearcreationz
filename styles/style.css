@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "regular";
+  font-style: normal;
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "bold";
+  font-style: normal;
+  src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "regular";
+  color: #111111;
+}
+
+.buttonDark, .buttonRed {
+  width: 140px;
+  height: 50px;
+  font-family: "bold";
+  background-color: transparent;
+  border-radius: 7px;
+  border: 2px solid #111111;
+  font-size: 20px;
+}
+
+.buttonRed {
+  border: 0px;
+  background-color: #C2272D;
+  color: #fafafa;
+}
+
+.hero {
+  background-color: #EDE9E9;
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.hero .heroInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 100px;
+}
+.hero .heroInfo h3 {
+  color: #C2272D;
+  font-family: "bold";
+  font-size: 18px;
+}
+.hero .heroInfo h1 {
+  font-size: 48px;
+  font-family: "bold";
+  line-height: 55px;
+}
+.hero .heroInfo p {
+  width: 100%;
+  font-size: 16px;
+  padding-top: 10px;
+}
+.hero .heroInfo .buttons {
+  padding-top: 10px;
+}
+.hero .logo {
+  height: 50px;
+  padding-top: 27px;
+  padding-left: 50px;
+}
+.hero .model {
+  display: none;
+  position: absolute;
+  height: 500px;
+  right: 600px;
+  bottom: 0;
+  z-index: 2;
+}
+.hero .vector {
+  display: none;
+  top: 0;
+  height: 100%;
+  right: 300px;
+  z-index: 1;
+}
+
+@media (min-width: 650px) {
+  .hero .heroInfo {
+    padding-left: 50px;
+    width: 600px;
+  }
+  .hero .heroInfo h3 {
+    font-size: 22px;
+  }
+  .hero .heroInfo h1 {
+    width: 500px;
+    font-size: 64px;
+  }
+  .hero .heroInfo p {
+    width: 400px;
+    padding-top: 10px;
+  }
+  .hero .heroInfo .buttons {
+    padding-top: 10px;
+  }
+}
+@media (min-width: 850px) {
+  .hero .heroInfo {
+    padding-left: 150px;
+    width: 600px;
+  }
+  .hero .heroInfo h3 {
+    font-size: 22px;
+  }
+  .hero .heroInfo h1 {
+    width: 650px;
+    font-size: 74px;
+    line-height: 65px;
+  }
+  .hero .heroInfo p {
+    width: 400px;
+    padding-top: 15px;
+    font-size: 18px;
+  }
+  .hero .heroInfo .buttons {
+    padding-top: 15px;
+  }
+}
+.navigationBar {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.navigationBar img {
+  height: 75px;
+  padding-left: 200px;
+  transform: translateY(-3px);
+}
+.navigationBar .hideOverflow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  overflow-x: hidden;
+  z-index: 2;
+}
+.navigationBar .hideOverflow #menu {
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 100%;
+  overflow: visible;
+  background-color: #C2272D;
+  transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transform: translateX(200px);
+}
+.navigationBar .hideOverflow #menu ul {
+  padding-top: 100px;
+  list-style: none;
+  text-align: center;
+}
+.navigationBar .hideOverflow #menu ul li {
+  padding-bottom: 30px;
+  width: 160px;
+  text-align: end;
+}
+.navigationBar .hideOverflow #menu ul li .fa {
+  display: none;
+}
+.navigationBar .hideOverflow #menu ul li a {
+  font-family: "bold";
+  text-decoration: none;
+  font-size: 25px;
+}
+.navigationBar .hamburgerMenu {
+  position: absolute;
+  z-index: 7;
+  top: 40px;
+  right: 30px;
+}
+.navigationBar .hamburgerMenu input {
+  opacity: 50%;
+  width: 70px;
+  height: 60px;
+  opacity: 0%;
+  position: absolute;
+  top: -20px;
+  left: -15px;
+}
+.navigationBar .hamburgerMenu span {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: #111111;
+  transition: 0.3s ease-in;
+}
+.navigationBar .hamburgerMenu span:nth-child(2) {
+  transform-origin: 0% 0%;
+}
+.navigationBar .hamburgerMenu span:last-child {
+  transform-origin: 0% 100%;
+}
+.navigationBar .hamburgerMenu input:checked ~ span {
+  transform: rotate(45deg) translate(0px, 0px);
+  background-color: #EDE9E9;
+}
+.navigationBar .hamburgerMenu input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.navigationBar .hamburgerMenu input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-5px, 4px);
+}
+
+@media (min-width: 1000px) {
+  .navigationBar {
+    flex-direction: row;
+    align-items: center;
+    z-index: 2;
+  }
+  .navigationBar .hideOverflow {
+    overflow: visible;
+    height: -moz-fit-content;
+    height: fit-content;
+    top: auto;
+    position: relative;
+  }
+  .navigationBar .hideOverflow #menu {
+    flex-direction: row;
+    background-color: transparent;
+    transform: translate(300px, -5px) !important;
+    position: relative;
+    width: 600px;
+    align-items: center;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .navigationBar .hideOverflow #menu ul {
+    padding-top: 0px;
+    text-align: center;
+    display: flex;
+  }
+  .navigationBar .hideOverflow #menu ul li {
+    text-align: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: 50px;
+    padding-bottom: 0px;
+  }
+  .navigationBar .hideOverflow #menu ul li a {
+    font-size: 20px;
+  }
+  .navigationBar .hamburgerMenu {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

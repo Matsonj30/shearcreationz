@@ -1,0 +1,113 @@
+.hero{
+    background-color: $secondaryColor;
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    
+
+    .heroInfo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 100px;
+
+        h3{
+            color: $accentColor;
+            font-family: "bold";
+            font-size: 18px;
+        }
+        h1{
+            font-size: 48px;
+            font-family: "bold";
+            line-height:55px;
+        }
+        p{
+            width: 100%;
+            font-size: 16px;
+            padding-top: 10px;
+        }
+
+        .buttons{
+            padding-top: 10px;
+        }
+    }
+
+    .logo{
+        height: 50px;
+        padding-top: 27px;
+        padding-left: 50px;
+    }
+    .model{
+        display: none;
+        position: absolute;
+        height: 500px;
+        right: 600px;
+        bottom: 0;
+        z-index: 2;
+    }
+    .vector{
+        display: none;
+        top: 0;
+        height: 100%;
+        right: 300px;
+        z-index: 1;
+    }
+}
+
+@media(min-width: 650px){
+    .hero{
+
+        .heroInfo{
+            padding-left: 50px;
+            width: 600px;
+            h3{
+                font-size: 22px;
+            }
+            h1{
+                width: 500px;
+                font-size: 64px;
+            }
+            p{
+                width: 400px;
+                padding-top: 10px;
+            }
+            .buttons{
+                padding-top: 10px;
+            }
+        }
+    
+
+
+    }
+}
+
+
+@media(min-width: 850px){
+    .hero{
+
+        .heroInfo{
+            padding-left: 150px;
+            width: 600px;
+            h3{
+                font-size: 22px;
+            }
+            h1{
+                width: 650px;
+                font-size: 74px;
+                line-height: 65px;
+            }
+            p{
+                width: 400px;
+                padding-top: 15px;
+                font-size: 18px;
+            }
+            .buttons{
+                padding-top: 15px;
+            }
+        }
+    
+
+
+    }
+}

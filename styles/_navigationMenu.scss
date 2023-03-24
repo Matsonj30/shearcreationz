@@ -1,0 +1,161 @@
+.navigationBar{
+    height: 100px;
+    width: 100%;
+    position: relative; //without position, we cant mess with overflow
+    display: flex;
+    align-items:center;
+    
+
+     
+    img{
+        height: 75px;
+        padding-left: 200px;
+        transform: translateY(-3px);        
+    }
+
+    .hideOverflow{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        overflow-x: hidden;
+        z-index: 2;
+ 
+
+        #menu{
+            position: fixed;
+            z-index: 6;
+            top: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            height: 100%;
+            overflow: visible;
+            background-color: $accentColor;
+            transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            transform: translateX(200px);
+        
+            ul{
+                padding-top: 100px;
+                list-style: none;
+                text-align: center;
+                li{
+                    padding-bottom: 30px;
+                    width: 160px;
+                    text-align: end;
+                    .fa{
+                        display: none
+                    }
+                    
+                    a{
+                        font-family: "bold";
+                        text-decoration: none;
+                        font-size: 25px;
+               
+                    }
+                    a:hover{
+
+                    }
+                }
+            }
+        }
+    }
+    .hamburgerMenu{
+        position: absolute;
+        z-index: 7;
+        top: 40px;
+        right: 30px;
+        
+
+        input{
+            opacity: 50%;
+            width: 70px;
+            height: 60px;
+            opacity: 0%;
+            position: absolute;
+            top: -20px;
+            left: -15px;
+        
+        }
+        span{
+            display: block;
+            width: 40px;
+            height: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            background-color: $black;
+            transition: 0.3s ease-in;
+        
+        }
+        span:nth-child(2){
+            transform-origin: 0% 0%;
+        }
+        span:last-child{
+            transform-origin: 0% 100%;
+                
+        }
+        input:checked ~ span{
+            transform: rotate(45deg) translate(0px, 0px);
+            background-color: $secondaryColor;
+        }
+    
+        input:checked ~ span:nth-child(3){
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        input:checked ~ span:nth-child(4){
+            transform: rotate(-45deg) translate(-5px, 4px);
+        }
+    }
+}
+
+@media(min-width: 1000px){
+    .navigationBar{
+     
+       flex-direction: row;
+       align-items: center;
+
+       z-index: 2;
+        .hideOverflow{
+            overflow: visible;
+            height: fit-content;
+            top: auto;
+            position: relative;
+            #menu{
+                flex-direction: row;
+                background-color: transparent;
+                transform: translate(300px, -5px) !important;
+                position: relative;
+                width: 600px;
+                align-items: center;
+                height: fit-content;
+                
+                ul{
+                    padding-top: 0px;
+                    text-align: center;
+                    display: flex;
+                    li{
+                        text-align: center;
+                        width: fit-content;
+                        padding-left: 50px;
+                        padding-bottom: 0px;
+                        a{
+                            font-size: 20px;
+                        }
+                    }
+                   
+                }
+            }   
+       
+        }
+        .hamburgerMenu{
+            display: none;
+        }   
+    }
+    
+   
+    
+}
