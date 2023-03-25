@@ -12,9 +12,8 @@
             .service{
                 display: flex;
                 align-items: center;
-                padding-top: 30px;
                 max-width: 500px;
-                margin: 25px 5px;
+                margin: 35px 5px;
                 .serviceDescription{
                     h3{
                         font-size: 25px;
@@ -101,8 +100,20 @@
 
 @media(min-width:1000px){
     .services{
+        .servicesSection{
+            padding-right: 75px;
+            .servicesList{
+                .service{
 
-
+                }
+            }
+        }
+        p{
+            font-size: 18px !important;
+        }
+        button{
+            margin-bottom: 0px;
+        }
         .gallerySection{
          
             zoom: 1;

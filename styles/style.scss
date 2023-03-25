@@ -69,7 +69,8 @@ $black: #111111;
     p{
         max-width: 500px;
         text-align: center;
-        padding: 30px 5px;
+        padding: 0px 5px;
+        padding-top: 30px;
     }
 }
 
@@ -81,7 +82,7 @@ $black: #111111;
     border-radius: 7px;
     border: 2px solid $black;
     font-size: 18px;
-    letter-spacing: 1px
+    letter-spacing: 1px;
 }
 .buttonRed{
     @extend .buttonDark;

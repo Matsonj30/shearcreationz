@@ -44,7 +44,8 @@
 .titleSection p {
   max-width: 500px;
   text-align: center;
-  padding: 30px 5px;
+  padding: 0px 5px;
+  padding-top: 30px;
 }
 
 .buttonDark, .buttonRed {
@@ -253,9 +254,8 @@
 .services .servicesSection .servicesList .service {
   display: flex;
   align-items: center;
-  padding-top: 30px;
   max-width: 500px;
-  margin: 25px 5px;
+  margin: 35px 5px;
 }
 .services .servicesSection .servicesList .service .serviceDescription h3 {
   font-size: 25px;
@@ -322,6 +322,15 @@
   }
 }
 @media (min-width: 1000px) {
+  .services .servicesSection {
+    padding-right: 75px;
+  }
+  .services p {
+    font-size: 18px !important;
+  }
+  .services button {
+    margin-bottom: 0px;
+  }
   .services .gallerySection {
     zoom: 1;
   }
