@@ -27,6 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .titleSection .text :first-child {
   color: #C2272D;
@@ -41,9 +42,9 @@
   width: 175px;
 }
 .titleSection p {
-  width: 500px;
+  max-width: 500px;
   text-align: center;
-  padding-top: 30px;
+  padding: 30px 5px;
 }
 
 .buttonDark, .buttonRed {
@@ -253,8 +254,8 @@
   display: flex;
   align-items: center;
   padding-top: 30px;
-  width: 500px;
-  margin: 25px 50px;
+  max-width: 500px;
+  margin: 25px 5px;
 }
 .services .servicesSection .servicesList .service .serviceDescription h3 {
   font-size: 25px;
@@ -270,14 +271,16 @@
 }
 .services button {
   margin-top: 30px;
+  margin-bottom: 60px;
 }
 .services .gallerySection {
-  width: 710px;
   display: grid;
+  width: 710px;
   grid-template-columns: 350px 350px;
   grid-template-rows: auto;
   grid-template-areas: "redbox hair1" "hair2 hair1" "hair2 nail1";
   gap: 8px;
+  zoom: 0.45;
 }
 .services .gallerySection .redBox {
   background-color: #C2272D;
@@ -313,6 +316,16 @@
   grid-area: nail1;
 }
 
+@media (min-width: 800px) {
+  .services .gallerySection {
+    zoom: 0.7;
+  }
+}
+@media (min-width: 1000px) {
+  .services .gallerySection {
+    zoom: 1;
+  }
+}
 .navigationBar {
   height: 100px;
   width: 100%;

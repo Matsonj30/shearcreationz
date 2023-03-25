@@ -13,8 +13,8 @@
                 display: flex;
                 align-items: center;
                 padding-top: 30px;
-                width: 500px;
-                margin: 25px 50px;
+                max-width: 500px;
+                margin: 25px 5px;
                 .serviceDescription{
                     h3{
                         font-size: 25px;
@@ -36,10 +36,11 @@
     }
     button{
         margin-top: 30px;
+        margin-bottom: 60px;
     }
     .gallerySection{
-        width: 710px;
         display: grid;
+        width: 710px;
         grid-template-columns: 350px 350px;
         grid-template-rows: auto;
         grid-template-areas: 
@@ -47,6 +48,7 @@
         "hair2 hair1"
         "hair2 nail1";
         gap: 8px;
+        zoom: 0.45;
         .redBox{
             background-color: $accentColor;
             width: 350px;
@@ -84,4 +86,26 @@
     }
 
 
+}
+
+@media(min-width:800px){
+    .services{
+
+
+        .gallerySection{
+            zoom: 0.7;
+        }
+    }
+}
+
+
+@media(min-width:1000px){
+    .services{
+
+
+        .gallerySection{
+         
+            zoom: 1;
+        }
+    }
 }
