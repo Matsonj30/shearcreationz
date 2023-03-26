@@ -111,12 +111,28 @@
         p{
             font-size: 18px !important;
         }
-        button{
-            margin-bottom: 0px;
-        }
+
         .gallerySection{
          
             zoom: 1;
         }
+    }
+}
+
+@media(min-width:1300px){
+    .services{
+        .servicesSection{
+            padding-right: 75px;
+            .servicesList{
+                .service{
+
+                }
+            }
+        }
+  
+        button{
+            margin-bottom: 0px;
+        }
+
     }
 }

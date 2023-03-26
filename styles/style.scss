@@ -42,6 +42,7 @@ $black: #111111;
 .wrapper{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .titleSection{
@@ -97,6 +98,8 @@ $black: #111111;
 //-------------------------------IMPORTS---------------------------------
 @import "index/_hero.scss";
 @import "index/_services.scss";
+@import "index/testimonials.scss";
+
 @import "_navigationMenu.scss"
 
 //-------------------------------IMPORTS---------------------------------
