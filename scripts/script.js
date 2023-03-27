@@ -16,19 +16,28 @@ function burgerMenu(){
 function moveTestimonial(direction){
     var currentTestimonialIndex = null;
     for(i = 1; i <= 3; i+=1){
-        console.log("testimonial"+[i])
         var currentTestimonial = document.getElementById("testimonial"+[i])
-        if(currentTestimonial.style.display != 'none'){
-            currentTestimonial.style.transform = 'translate(100vw)';
+
+        if(getComputedStyle(currentTestimonial).transform == 'none'){
             currentTestimonialIndex = i;
-            break
+            
         }
+
     }
 
-    if(direction == 'left'){
-        
+    console.log(currentTestimonialIndex)
+    if(direction == 'left'){ //get index - 1 and move left 
+        //Old Testimonial
+        document.getElementById("testimonial"+[currentTestimonialIndex]).style.transform = 'translateX(-100vw)';
+        currentTestimonialIndex -= 1;
+        //New testimonial
+        document.getElementById("testimonial"+[currentTestimonialIndex]).style.transform = 'none';
+      
     }
-    else{
+    else{ //get index + 1 and move right
+        document.getElementById("testimonial"+[currentTestimonialIndex]).style.transform = 'translateX(100vw)';
+        currentTestimonialIndex += 1;
+        document.getElementById("testimonial"+[currentTestimonialIndex]).style.transform = 'none';
 
     }
 
