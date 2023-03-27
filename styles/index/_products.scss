@@ -1,0 +1,38 @@
+.products{
+    margin-top: 30px;
+    background-image: url("../../images/products.png");
+    background-size: cover;
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h2{
+        font-size: 40px;
+        font-family: "bold";
+    }
+
+    .images{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        img{
+            padding: 20px 10px;
+            height: 75px;
+        }
+    }
+}
+
+
+@media(min-width: 550px){
+    .products{
+        .images{
+            img{
+                padding: 50px 50px;
+            }
+        }
+    }
+}

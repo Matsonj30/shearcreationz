@@ -98,8 +98,11 @@ $black: #111111;
 //-------------------------------IMPORTS---------------------------------
 @import "index/_hero.scss";
 @import "index/_services.scss";
-@import "index/testimonials.scss";
+@import "index/_testimonials.scss";
+@import "index/_aboutUs.scss";
+@import "index/_products.scss";
 
-@import "_navigationMenu.scss"
 
+@import "_navigationMenu.scss";
+@import "_footer.scss"
 //-------------------------------IMPORTS---------------------------------
