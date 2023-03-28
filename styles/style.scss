@@ -8,7 +8,7 @@ $secondaryColorDark: #202020;
 $secondaryColorLight: #1E1F26;
 
 $accentColor: #C2272D;
-$accentColorDark: #272021;
+$accentColorDark: #e6242b;
 $accentColorLight: #77623b;;
 
 $white:  #FAFAFA;
@@ -101,6 +101,7 @@ $black: #111111;
 @import "index/_testimonials.scss";
 @import "index/_aboutUs.scss";
 @import "index/_products.scss";
+@import "index/_gallery.scss";
 
 
 @import "_navigationMenu.scss";

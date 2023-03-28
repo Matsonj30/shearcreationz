@@ -347,10 +347,12 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 350px;
+  min-height: 300px;
+  padding-bottom: 20px;
   overflow: hidden;
   margin-top: 100px;
   background-color: #EDE9E9;
+  z-index: 2;
 }
 .testimonials .titleSection {
   width: -moz-fit-content;
@@ -368,16 +370,15 @@
   width: 175px;
 }
 .testimonials .quote {
-  transform: translateY(-15px);
-  width: 75px;
+  margin-top: 10px;
+  width: 55px;
 }
 .testimonials .testimonial, .testimonials .responsiveTest {
-  display: none;
   position: absolute;
   display: flex;
   max-width: 1000px;
   flex-wrap: wrap;
-  top: 45%;
+  top: 21%;
   transition: 1s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 .testimonials .testimonial p, .testimonials .responsiveTest p {
@@ -391,8 +392,8 @@
 }
 .testimonials .responsiveTest {
   position: relative;
-  display: block;
   opacity: 0;
+  display: block;
 }
 .testimonials #testimonial2 {
   transform: translateX(-100vw);
@@ -417,16 +418,34 @@
   max-width: 1500px;
   height: -moz-fit-content;
   height: fit-content;
-  top: 85%;
+  top: 69%;
   z-index: 2;
 }
 .testimonials .arrows #leftArrow {
   height: 50px;
+  opacity: 0;
+  pointer-events: none;
 }
 .testimonials .arrows #rightArrow {
   margin-left: 500px;
   height: 50px;
   transform: rotate(180deg);
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+span {
+  display: block;
+  background-color: #C2272D;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0px 2px;
 }
 
 .aboutUs {
@@ -471,7 +490,7 @@
   }
 }
 .products {
-  margin-top: 30px;
+  margin-top: 100px;
   background-image: url("../../images/products.png");
   background-size: cover;
   width: 100%;
@@ -496,9 +515,82 @@
   height: 75px;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 450px) {
   .products .images img {
     padding: 50px 50px;
+  }
+}
+.gallery {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 341px 75px 243px 293px 395px;
+  grid-template-rows: auto;
+  grid-template-areas: "hair1 hair2 hair2 hair3 rightbox" "hair1 hair2 hair2 hair3 hair5" "leftbox leftbox nails2 nails2 hair5";
+  gap: 8px;
+  zoom: 0.9;
+}
+.gallery img {
+  height: 446px;
+}
+.gallery .leftBox, .gallery .rightBox {
+  grid-area: leftbox;
+  background-color: #C2272D;
+  height: 300px;
+  width: 426px;
+  border-radius: 0px 0px 0px 73px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gallery .leftBox h1, .gallery .rightBox h1 {
+  color: #fafafa;
+  font-size: 55px;
+  font-family: "bold";
+}
+.gallery .rightBox {
+  grid-area: rightbox;
+  border-radius: 0px 73px 0px 0px;
+  line-height: 70px;
+  text-align: center;
+  width: 395px !important;
+  height: 257px;
+}
+.gallery :nth-child(3) {
+  grid-area: hair1;
+  border-radius: 73px 0px 0px 0px;
+}
+.gallery :nth-child(4) {
+  grid-area: hair2;
+}
+.gallery :nth-child(5) {
+  grid-area: hair3;
+}
+.gallery :nth-child(6) {
+  grid-area: nails2;
+  height: 300px;
+  width: 545px;
+}
+.gallery :nth-child(7) {
+  grid-area: hair5;
+  height: 490px;
+  width: 395px;
+  border-radius: 0px 0px 73px 0px;
+}
+
+@media (max-width: 1300px) {
+  .gallery {
+    zoom: 0.6;
+  }
+}
+@media (max-width: 1000px) {
+  .gallery {
+    zoom: 0.45;
+  }
+}
+@media (max-width: 1000px) {
+  .gallery {
+    display: none;
   }
 }
 .navigationBar {
@@ -618,8 +710,9 @@
   }
 }
 footer {
+  margin-top: 100px;
   color: #FAFAFA !important;
-  background-color: #272021;
+  background-color: #EDE9E9;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -644,7 +737,9 @@ footer .section ul li {
 }
 footer .section ul li a {
   text-decoration: none;
-  color: #FAFAFA;
+}
+footer .section ul li .fa {
+  color: #C2272D;
 }
 footer .section ul li:hover {
   opacity: 0.4;
@@ -653,6 +748,12 @@ footer .section ul li:hover {
 footer .section ul li:first-child:hover {
   opacity: 1;
   cursor: auto;
+}
+footer .section ul li:first-child {
+  color: #C2272D;
+}
+footer .section ul li:first-child b {
+  color: #C2272D;
 }
 footer .logoAndDescription {
   margin-bottom: 30px;
@@ -665,7 +766,7 @@ footer .logoAndDescription p {
   text-align: center;
 }
 footer .logoAndDescription img {
-  width: 150px;
+  width: 300px;
 }
 footer .hours .fa {
   padding-right: 5px;
@@ -721,7 +822,7 @@ footer .contact .fa-instagram {
   }
 }
 .copyright {
-  background-color: #1d1819;
+  background-color: #dddcdc;
   width: 100%;
   color: #FAFAFA;
   display: flex;
@@ -736,7 +837,8 @@ footer .contact .fa-instagram {
 }
 .copyright .developer a {
   text-decoration: none;
-  color: #EDE9E9;
+  font-family: "bold";
+  color: #C2272D;
 }
 .copyright .developer a:hover {
   opacity: 0.5;

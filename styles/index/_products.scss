@@ -1,5 +1,5 @@
 .products{
-    margin-top: 30px;
+    margin-top: 100px;
     background-image: url("../../images/products.png");
     background-size: cover;
     width: 100%;
@@ -27,7 +27,7 @@
 }
 
 
-@media(min-width: 550px){
+@media(min-width: 450px){
     .products{
         .images{
             img{

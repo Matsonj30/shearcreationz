@@ -20,13 +20,16 @@ function moveTestimonial(direction){
 
         if(getComputedStyle(currentTestimonial).transform == 'none'){
             currentTestimonialIndex = i;
-            
+            moveDiv(currentTestimonialIndex, direction)
         }
 
     }
+}
 
-    console.log(currentTestimonialIndex)
-    if(direction == 'left'){ //get index - 1 and move left 
+
+function moveDiv(currentTestimonialIndex, direction){
+
+    if(direction == 'left'){ //get index - 1 and move left
         //Old Testimonial
         document.getElementById("testimonial"+[currentTestimonialIndex]).style.transform = 'translateX(-100vw)';
         currentTestimonialIndex -= 1;
@@ -40,5 +43,37 @@ function moveTestimonial(direction){
         document.getElementById("testimonial"+[currentTestimonialIndex]).style.transform = 'none';
 
     }
-
+    changeDot(currentTestimonialIndex)
 }
+
+function changeDot(currentTestimonialIndex){
+    console.log(currentTestimonialIndex)
+    var leftArrow = document.getElementById("leftArrow")
+    var rightArrow = document.getElementById("rightArrow")
+
+    if(currentTestimonialIndex == 1){ //will be furthest to the left
+        leftArrow.style.cssText = 'opacity: 0; pointer-Events: none;';
+    }
+    else if(currentTestimonialIndex == 3){ //will be furthest to the left
+        rightArrow.style.cssText = 'opacity: 0; pointer-Events: none;';
+    }
+    else{
+        leftArrow.style.cssText = 'opacity: 1; pointer-Events: all;';
+        rightArrow.style.cssText = 'opacity: 1 ;pointer-Events: all;';
+      
+    }
+    
+
+    for(i = 1; i <= 3; i+=1){
+        if(i == currentTestimonialIndex){
+            document.getElementById("circle"+[i]).style.backgroundColor = "#e6242b"
+        }
+        else{
+            document.getElementById("circle"+[i]).style.backgroundColor = "#C2272D"
+        }
+    
+    }
+
+   
+}
+  
