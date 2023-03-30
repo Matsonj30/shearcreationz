@@ -47,7 +47,6 @@ function moveDiv(currentTestimonialIndex, direction){
 }
 
 function changeDot(currentTestimonialIndex){
-    console.log(currentTestimonialIndex)
     var leftArrow = document.getElementById("leftArrow")
     var rightArrow = document.getElementById("rightArrow")
 
@@ -63,7 +62,6 @@ function changeDot(currentTestimonialIndex){
       
     }
     
-
     for(i = 1; i <= 3; i+=1){
         if(i == currentTestimonialIndex){
             document.getElementById("circle"+[i]).style.backgroundColor = "#e6242b"
@@ -71,9 +69,6 @@ function changeDot(currentTestimonialIndex){
         else{
             document.getElementById("circle"+[i]).style.backgroundColor = "#C2272D"
         }
-    
     }
-
-   
 }
   

@@ -89,7 +89,7 @@
     height: 75px;
     max-width: 1500px;
     height: fit-content;
-    top:69%;
+    top:85%;
     z-index: 2;
     #leftArrow{
         height: 50px;
@@ -97,7 +97,7 @@
         pointer-events: none;
     }
     #rightArrow{
-        margin-left: 500px;
+        margin-left: 200px;
         height: 50px;
         transform: rotate(180deg);
     }
@@ -112,7 +112,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 45px;
+        #circle1{
+            background-color: #e6242b;
+        }
    }
    span{
     display: block;
@@ -121,4 +124,16 @@
     height: 20px;
     border-radius: 50%;
     margin: 0px 2px;
+}
+
+@media(min-width:550px){
+    .testimonials{
+        .arrows{
+            top: 70%;
+            #rightArrow{
+                margin-left: 500px;
+            }
+        }
+        
+    }
 }

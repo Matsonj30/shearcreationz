@@ -1,0 +1,82 @@
+.teamMembers{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .member{
+        display: flex;
+   
+        flex-wrap: wrap;
+        max-width: 1500px;
+        padding: 50px 10px;
+        img{
+            border: 2px solid $accentColor;
+            height: 300px;
+            width: auto;
+
+        }
+        
+        .text{
+            padding-top: 20px;
+            max-width: 800px;
+            .namePosition{
+                border-left: 5px solid $accentColor;
+                padding-left: 5px;
+                line-height: 25px;
+                h1{
+                    font-family: "bold";
+                }
+                b{
+                    display: block;
+                    color: $accentColor;
+                    font-size: 12px;
+                    height: 18px;
+                }
+            }
+            p{
+                line-height: 30px;
+                padding-top: 15px;
+            }
+        }
+        .socials{
+            display: flex;
+            .fa{
+                margin: 10px 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $accentColor;
+                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                font-size: 20px;
+                color: $primaryColor;
+                border: 2px solid $accentColor;
+                transition: 0.5s;
+            }
+            .fa:hover{
+                background-color: $primaryColor;
+                color: $accentColor;
+                cursor: pointer;
+            }
+           
+        }
+    }
+}
+
+@media(min-width:1194px){
+    .teamMembers{
+
+
+        .member{
+            padding: 50px 50px;
+
+            .text{
+                padding-left: 30px;
+                padding-top: 0px;
+            }
+        }
+        
+    }
+}
