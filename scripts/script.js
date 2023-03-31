@@ -13,6 +13,30 @@ function burgerMenu(){
     }
 }
 
+function defineCurrentPage(){
+    var tab = window.location.href;
+    var links = document.getElementById("menu").querySelectorAll("a")
+
+    console.log(tab)
+    switch(tab){
+        case "http://127.0.0.1:5500/index.html":
+            links[0].style.borderBottom = "3px solid #C2272D";
+            break
+        case "http://127.0.0.1:5500/ourTeam.html":
+            links[1].style.borderBottom = "3px solid #C2272D";
+            break
+        case "https://hairimagecamrose.ca/contact":
+            links[2].style.borderBottom = "3px solid #C2272D";
+            break
+        case "http://127.0.0.1:5500/contact.html":
+            links[3].style.borderBottom = "3px solid #C2272D";
+            break
+    }//switch  
+}
+
+defineCurrentPage()
+
+
 function moveTestimonial(direction){
     var currentTestimonialIndex = null;
     for(i = 1; i <= 3; i+=1){

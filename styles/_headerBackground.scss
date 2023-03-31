@@ -9,9 +9,35 @@
     align-items: center;
     color: $white;
 
+    .logo{
+        height: 50px;
+        padding-top: 27px;
+        padding-left: 50px;
+        position: absolute;
+        top: 0;
+        left: 50px;
+    }
+
+    .content{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .leftVector{
+        height: 400px;
+        position: relative;
+
+
+    }
+    .rightVector{
+        height: 400px;
+        position: relative;
+        rotate: 180deg;
+    }
     .text{ 
         display: flex;
         flex-direction: column;
+        width: 480px;
         align-items: center;
         h3{
             font-size: 20px;
@@ -33,7 +59,35 @@
 }
 @import "_navigationMenu.scss";
 
-.menu2{
-    @extend #menu ;
+
+@media(min-width:1000px){
+
+    .moveBar{
+        #menu{
+            transform: translateX(0px) !important;
+        }
+    }
 }
 
+
+
+@media(max-width:1300px){
+    .buffer{
+        height: 200px;
+    } 
+    .headerBackground{
+ 
+        .text{
+            width: unset;
+            max-width: 500px;
+        }
+        
+        height: 300px;
+        .leftVector{
+            display: none;
+        }
+        .rightVector{
+            display: none;
+        }
+    }
+}

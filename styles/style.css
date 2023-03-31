@@ -605,7 +605,6 @@ span {
   }
 }
 .teamMembers {
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -675,6 +674,94 @@ span {
     padding-top: 0px;
   }
 }
+.titleSection {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.contactUs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.contactUs .getInTouch {
+  width: 500px;
+  padding: 20px 5px;
+}
+.contactUs .getInTouch .disclaimer {
+  border-bottom: 3px solid #C2272D;
+  padding-bottom: 10px;
+}
+.contactUs .getInTouch .contactDetails .method {
+  padding-bottom: 15px;
+}
+.contactUs .getInTouch .contactDetails .method .fa {
+  text-align: center;
+  width: 35px;
+  margin-left: auto;
+  color: #C2272D;
+  font-size: 25px;
+}
+.contactUs .getInTouch .contactDetails .method .fa-map-marker, .contactUs .getInTouch .contactDetails .method .fa-phone {
+  font-size: 29px;
+}
+.contactUs .getInTouch .contactDetails .location {
+  padding-top: 10px;
+}
+.contactUs .contactForm {
+  width: 500px;
+  padding: 20px 5px;
+}
+.contactUs .contactForm .contactUs {
+  display: flex;
+  flex-direction: column;
+}
+.contactUs .contactForm .contactUs form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.contactUs .contactForm .contactUs form button {
+  margin-top: 5px;
+  width: 120px;
+  height: 50px;
+}
+.contactUs .contactForm .contactUs form input {
+  border-radius: 10px;
+  padding: 5px 5px;
+  border: 3px solid #111111;
+  margin-bottom: 5px;
+}
+.contactUs .contactForm .contactUs form input:focus {
+  outline: none !important;
+  background-color: #1E1F26;
+}
+.contactUs .contactForm .contactUs form #message {
+  height: 200px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  border: 3px solid #111111;
+}
+.contactUs .contactForm .contactUs form #message:focus {
+  outline: none !important;
+  background-color: #1E1F26;
+}
+
+iframe {
+  width: min(2500px, 100%);
+  height: 400px;
+  padding-top: 13px;
+}
+
+@media (min-width: 1024px) {
+  .contactUs .getInTouch {
+    padding: 20px 20px;
+  }
+  .contactUs .contactForm {
+    padding: 20px 20px;
+  }
+}
 .navigationBar {
   height: 100px;
   width: 100%;
@@ -682,7 +769,7 @@ span {
   display: flex;
   align-items: center;
 }
-.navigationBar #menu, .navigationBar .menu2 {
+.navigationBar #menu {
   position: fixed;
   z-index: 6;
   top: 0;
@@ -697,23 +784,24 @@ span {
   transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transform: translateX(200px);
 }
-.navigationBar #menu ul, .navigationBar .menu2 ul {
+.navigationBar #menu ul {
   padding-top: 100px;
   list-style: none;
   text-align: center;
 }
-.navigationBar #menu ul li, .navigationBar .menu2 ul li {
+.navigationBar #menu ul li {
   padding-bottom: 30px;
   width: 160px;
   text-align: end;
 }
-.navigationBar #menu ul li .fa, .navigationBar .menu2 ul li .fa {
+.navigationBar #menu ul li .fa {
   display: none;
 }
-.navigationBar #menu ul li a, .navigationBar .menu2 ul li a {
+.navigationBar #menu ul li a {
   font-family: "bold";
   text-decoration: none;
   font-size: 25px;
+  color: #fafafa;
 }
 .hamburgerMenu {
   position: absolute;
@@ -763,7 +851,7 @@ span {
     z-index: 2;
     justify-content: center;
   }
-  .navigationBar #menu, .navigationBar .menu2 {
+  .navigationBar #menu {
     background-color: transparent;
     transform: translateX(150px);
     position: relative;
@@ -772,20 +860,32 @@ span {
     height: -moz-fit-content;
     height: fit-content;
   }
-  .navigationBar #menu ul, .navigationBar .menu2 ul {
+  .navigationBar #menu ul {
     padding-top: 0px;
     text-align: center;
     display: flex;
   }
-  .navigationBar #menu ul li, .navigationBar .menu2 ul li {
+  .navigationBar #menu ul li {
     text-align: center;
     width: -moz-fit-content;
     width: fit-content;
     padding-left: 50px;
     padding-bottom: 0px;
   }
-  .navigationBar #menu ul li a, .navigationBar .menu2 ul li a {
+  .navigationBar #menu ul li a {
     font-size: 20px;
+    color: unset;
+  }
+  .navigationBar #menu ul li :after {
+    display: block;
+    content: "";
+    border-bottom: 3px solid #C2272D;
+    transform: scaleX(0);
+    transition: 250ms ease-in-out;
+  }
+  .navigationBar #menu ul li :hover::after {
+    transform: scaleX(1);
+    transform-origin: 50% 100%;
   }
   .hamburgerMenu {
     display: none;
@@ -938,9 +1038,32 @@ footer .contact .fa-instagram {
   align-items: center;
   color: #FAFAFA;
 }
+.headerBackground .logo {
+  height: 50px;
+  padding-top: 27px;
+  padding-left: 50px;
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+.headerBackground .content {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.headerBackground .leftVector {
+  height: 400px;
+  position: relative;
+}
+.headerBackground .rightVector {
+  height: 400px;
+  position: relative;
+  rotate: 180deg;
+}
 .headerBackground .text {
   display: flex;
   flex-direction: column;
+  width: 480px;
   align-items: center;
 }
 .headerBackground .text h3 {
@@ -967,7 +1090,7 @@ footer .contact .fa-instagram {
   display: flex;
   align-items: center;
 }
-.navigationBar #menu, .navigationBar .menu2 {
+.navigationBar #menu {
   position: fixed;
   z-index: 6;
   top: 0;
@@ -982,23 +1105,24 @@ footer .contact .fa-instagram {
   transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transform: translateX(200px);
 }
-.navigationBar #menu ul, .navigationBar .menu2 ul {
+.navigationBar #menu ul {
   padding-top: 100px;
   list-style: none;
   text-align: center;
 }
-.navigationBar #menu ul li, .navigationBar .menu2 ul li {
+.navigationBar #menu ul li {
   padding-bottom: 30px;
   width: 160px;
   text-align: end;
 }
-.navigationBar #menu ul li .fa, .navigationBar .menu2 ul li .fa {
+.navigationBar #menu ul li .fa {
   display: none;
 }
-.navigationBar #menu ul li a, .navigationBar .menu2 ul li a {
+.navigationBar #menu ul li a {
   font-family: "bold";
   text-decoration: none;
   font-size: 25px;
+  color: #fafafa;
 }
 .hamburgerMenu {
   position: absolute;
@@ -1048,7 +1172,7 @@ footer .contact .fa-instagram {
     z-index: 2;
     justify-content: center;
   }
-  .navigationBar #menu, .navigationBar .menu2 {
+  .navigationBar #menu {
     background-color: transparent;
     transform: translateX(150px);
     position: relative;
@@ -1057,22 +1181,57 @@ footer .contact .fa-instagram {
     height: -moz-fit-content;
     height: fit-content;
   }
-  .navigationBar #menu ul, .navigationBar .menu2 ul {
+  .navigationBar #menu ul {
     padding-top: 0px;
     text-align: center;
     display: flex;
   }
-  .navigationBar #menu ul li, .navigationBar .menu2 ul li {
+  .navigationBar #menu ul li {
     text-align: center;
     width: -moz-fit-content;
     width: fit-content;
     padding-left: 50px;
     padding-bottom: 0px;
   }
-  .navigationBar #menu ul li a, .navigationBar .menu2 ul li a {
+  .navigationBar #menu ul li a {
     font-size: 20px;
+    color: unset;
+  }
+  .navigationBar #menu ul li :after {
+    display: block;
+    content: "";
+    border-bottom: 3px solid #C2272D;
+    transform: scaleX(0);
+    transition: 250ms ease-in-out;
+  }
+  .navigationBar #menu ul li :hover::after {
+    transform: scaleX(1);
+    transform-origin: 50% 100%;
   }
   .hamburgerMenu {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .moveBar #menu {
+    transform: translateX(0px) !important;
+  }
+}
+@media (max-width: 1300px) {
+  .buffer {
+    height: 200px;
+  }
+  .headerBackground {
+    height: 300px;
+  }
+  .headerBackground .text {
+    width: unset;
+    max-width: 500px;
+  }
+  .headerBackground .leftVector {
+    display: none;
+  }
+  .headerBackground .rightVector {
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */
