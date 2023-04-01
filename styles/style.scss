@@ -46,12 +46,8 @@ $black: #111111;
 }
 
 .titleSection{
-    position: relative;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
+
     .text{
         :first-child{
             color: $accentColor;
@@ -84,12 +80,26 @@ $black: #111111;
     border: 2px solid $black;
     font-size: 18px;
     letter-spacing: 1px;
+    transition: 0.5s;
+    cursor: pointer;
 }
+.buttonDark:hover{
+    background-color: $accentColor;
+    border-color: $accentColor;
+    color: $primaryColor
+}
+
 .buttonRed{
     @extend .buttonDark;
-    border: 0px;
+    border: 2px solid $accentColor;
     background-color: $accentColor;
     color: $primaryColor;
+
+}
+.buttonRed:hover{
+   
+    background-color: transparent;
+    color: $accentColor;
 }
 
 //-------------------------------MULTI PURPOSE CSS---------------------------------
@@ -104,7 +114,9 @@ $black: #111111;
 @import "index/_gallery.scss";
 
 @import "ourTeam/_ourTeam.scss";
-@import "contact/contactUs.scss";
+@import "contact/_contactUs.scss";
+@import "services/_servicesList.scss";
+
 
 @import "_navigationMenu.scss";
 @import "_footer.scss";

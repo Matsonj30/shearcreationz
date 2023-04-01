@@ -41,7 +41,7 @@
         display: grid;
         width: 710px;
         grid-template-columns: 350px 350px;
-        grid-template-rows: auto;
+        grid-template-rows: 300px 232px 340px;
         grid-template-areas: 
         "redbox hair1"
         "hair2 hair1"
@@ -69,7 +69,9 @@
         :nth-child(2){
             width: 350px;
             height: 540px;
+            border-radius: 0px 73px 0px 0px;
             grid-area: hair1;
+            
         }
         :nth-child(3){
             width: 350px;
@@ -80,6 +82,7 @@
         :nth-child(4){
             width: 350px;
             height: 340px;
+            border-radius: 0px 0px 73px 0px;
             grid-area: nail1;
         }
     }

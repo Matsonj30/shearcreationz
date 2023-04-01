@@ -65,7 +65,7 @@
                 }
                 input:focus{
                     outline: none !important;
-                    background-color: $secondaryColorLight;
+                    background-color: $secondaryColor;
                 }
                 #message{
                     height: 200px;
@@ -75,7 +75,7 @@
                 }
                 #message:focus{
                     outline: none !important;
-                    background-color: $secondaryColorLight;
+                    background-color: $secondaryColor;
                 }
             }
           

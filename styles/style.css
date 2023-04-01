@@ -22,12 +22,6 @@
 }
 
 .titleSection {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 .titleSection .text :first-child {
@@ -58,12 +52,25 @@
   border: 2px solid #111111;
   font-size: 18px;
   letter-spacing: 1px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.buttonDark:hover, .buttonRed:hover {
+  background-color: #C2272D;
+  border-color: #C2272D;
+  color: #fafafa;
 }
 
 .buttonRed {
-  border: 0px;
+  border: 2px solid #C2272D;
   background-color: #C2272D;
   color: #fafafa;
+}
+
+.buttonRed:hover {
+  background-color: transparent;
+  color: #C2272D;
 }
 
 .hero {
@@ -278,7 +285,7 @@
   display: grid;
   width: 710px;
   grid-template-columns: 350px 350px;
-  grid-template-rows: auto;
+  grid-template-rows: 300px 232px 340px;
   grid-template-areas: "redbox hair1" "hair2 hair1" "hair2 nail1";
   gap: 8px;
   zoom: 0.45;
@@ -303,6 +310,7 @@
 .services .gallerySection :nth-child(2) {
   width: 350px;
   height: 540px;
+  border-radius: 0px 73px 0px 0px;
   grid-area: hair1;
 }
 .services .gallerySection :nth-child(3) {
@@ -314,6 +322,7 @@
 .services .gallerySection :nth-child(4) {
   width: 350px;
   height: 340px;
+  border-radius: 0px 0px 73px 0px;
   grid-area: nail1;
 }
 
@@ -735,7 +744,7 @@ span {
 }
 .contactUs .contactForm .contactUs form input:focus {
   outline: none !important;
-  background-color: #1E1F26;
+  background-color: #EDE9E9;
 }
 .contactUs .contactForm .contactUs form #message {
   height: 200px;
@@ -745,7 +754,7 @@ span {
 }
 .contactUs .contactForm .contactUs form #message:focus {
   outline: none !important;
-  background-color: #1E1F26;
+  background-color: #EDE9E9;
 }
 
 iframe {
@@ -760,6 +769,52 @@ iframe {
   }
   .contactUs .contactForm {
     padding: 20px 20px;
+  }
+}
+.servicesList .section {
+  padding: 20px 10px;
+  max-width: 800px;
+}
+.servicesList .section .content .service {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #EDE9E9;
+  margin-bottom: 15px;
+}
+.servicesList .section .content .service b {
+  color: #C2272D;
+  font-family: "bold";
+}
+
+@media (min-width: 850px) {
+  .servicesList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .servicesList .section {
+    max-width: unset;
+    width: 600px;
+    padding: 30px 50px;
+  }
+  .servicesList .section .titleSection {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .servicesList .section .content .service {
+    font-size: 18px;
+  }
+  .servicesList .pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .servicesList .pricing .content p {
+    width: 600px;
+    font-size: 18px;
   }
 }
 .navigationBar {
