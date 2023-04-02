@@ -654,6 +654,9 @@ span {
 .teamMembers .member .socials {
   display: flex;
 }
+.teamMembers .member .socials a {
+  text-decoration: none;
+}
 .teamMembers .member .socials .fa {
   margin: 10px 5px;
   display: flex;

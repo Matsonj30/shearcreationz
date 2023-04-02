@@ -40,6 +40,9 @@
         }
         .socials{
             display: flex;
+            a{
+                text-decoration: none;
+            }
             .fa{
                 margin: 10px 5px;
                 display: flex;
