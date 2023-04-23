@@ -92,7 +92,7 @@
   font-size: 18px;
 }
 .hero .heroInfo h1 {
-  font-size: 48px;
+  font-size: 42px;
   font-family: "bold";
   line-height: 55px;
 }
@@ -230,7 +230,7 @@
   }
   .hero .heroInfo h1 {
     width: 670px;
-    font-size: 88px;
+    font-size: 80px;
     line-height: 80px;
   }
   .hero .heroInfo p {
@@ -263,10 +263,10 @@
   display: flex;
   align-items: center;
   max-width: 500px;
-  margin: 35px 5px;
+  margin: 30px 5px;
 }
 .services .servicesSection .servicesList .service .serviceDescription h3 {
-  font-size: 25px;
+  font-size: 28px;
   font-family: "bold";
 }
 .services .servicesSection .servicesList .service .serviceDescription p {
@@ -1074,7 +1074,7 @@ footer .contact .fa-instagram {
   display: flex;
 }
 .copyright .developer p {
-  font-size: 16px;
+  font-size: 15px;
 }
 .copyright .developer a {
   text-decoration: none;
