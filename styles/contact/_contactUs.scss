@@ -68,6 +68,7 @@
                     background-color: $secondaryColor;
                 }
                 #message{
+                    resize: none;
                     height: 200px;
                     padding: 5px 5px;
                     border-radius: 10px;
