@@ -37,62 +37,56 @@ function defineCurrentPage(){
 defineCurrentPage()
 
 
-function moveTestimonial(direction){
-    var currentTestimonialIndex = null;
-    for(i = 1; i <= 3; i+=1){
-        var currentTestimonial = document.getElementById("testimonial"+[i])
+document.getElementById("imageContainer").addEventListener("scroll", scrollEvent);
+console.log(document.getElementById("imageContainer"))
 
-        if(getComputedStyle(currentTestimonial).transform == 'none'){
-            currentTestimonialIndex = i;
-            moveDiv(currentTestimonialIndex, direction)
-        }
+function changeIndex(direction){
 
+    var currentIndex = getCurrentIndex()
+    //current spot +- 1 depending on button clicked
+    nextIndex = currentIndex + direction;
+    if(nextIndex == -1){
+        nextIndex = 2;
     }
+    else if(nextIndex == 3){
+        nextIndex = 0;
+    }
+   
+    var nextDestination = document.getElementById("test"+ (nextIndex)); 
+    nextDestination.scrollIntoView({behavior: "smooth", block: "nearest", inline: "start"});
+
+}
+function getCurrentIndex(){
+    scrollContainer = document.getElementById("imageContainer");
+    var indicies = scrollContainer.getElementsByClassName("testimonial");
+
+    var positionInContainer = scrollContainer.scrollLeft;
+    var widthOfTestimonial = indicies[0].offsetWidth; //all same width
+    var currentIndex = Math.floor(positionInContainer / widthOfTestimonial);
+    //If you add too much padding, it may get the wrong index if you add a lot of elements
+
+    return currentIndex;
 }
 
+//cant put this in the scroll event listener for some reason
+function scrollEvent(){
 
-function moveDiv(currentTestimonialIndex, direction){
-
-    if(direction == 'left'){ //get index - 1 and move left
-        //Old Testimonial
-        document.getElementById("testimonial"+[currentTestimonialIndex]).style.transform = 'translateX(-100vw)';
-        currentTestimonialIndex -= 1;
-        //New testimonial
-        document.getElementById("testimonial"+[currentTestimonialIndex]).style.transform = 'none';
-      
-    }
-    else{ //get index + 1 and move right
-        document.getElementById("testimonial"+[currentTestimonialIndex]).style.transform = 'translateX(100vw)';
-        currentTestimonialIndex += 1;
-        document.getElementById("testimonial"+[currentTestimonialIndex]).style.transform = 'none';
-
-    }
-    changeDot(currentTestimonialIndex)
+    changeCircleColor(getCurrentIndex())
 }
-
-function changeDot(currentTestimonialIndex){
-    var leftArrow = document.getElementById("leftArrow")
-    var rightArrow = document.getElementById("rightArrow")
-
-    if(currentTestimonialIndex == 1){ //will be furthest to the left
-        leftArrow.style.cssText = 'opacity: 0; pointer-Events: none;';
-    }
-    else if(currentTestimonialIndex == 3){ //will be furthest to the left
-        rightArrow.style.cssText = 'opacity: 0; pointer-Events: none;';
-    }
-    else{
-        leftArrow.style.cssText = 'opacity: 1; pointer-Events: all;';
-        rightArrow.style.cssText = 'opacity: 1 ;pointer-Events: all;';
+function changeCircleColor(currentIndex){
+  
+    for(i = 0; i <= 2; i+=1){
       
-    }
-    
-    for(i = 1; i <= 3; i+=1){
-        if(i == currentTestimonialIndex){
-            document.getElementById("circle"+[i]).style.backgroundColor = "#e6242b"
+        var circle = document.getElementById("circle"+i)
+     
+        if(currentIndex == i){
+            circle.style.backgroundColor = "#fafafa"
         }
         else{
-            document.getElementById("circle"+[i]).style.backgroundColor = "#C2272D"
+            circle.style.backgroundColor = "#A8A8A8"
         }
     }
+    if(currentIndex > 4){
+        document.getElementById("circle4").style.backgroundColor = "#6aabe0";
+    }
 }
-  
