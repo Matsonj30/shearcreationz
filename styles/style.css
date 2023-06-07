@@ -505,7 +505,7 @@
 }
 .aboutUs .aboutUsContent .aboutUsText {
   max-width: 600px;
-  line-height: 35px;
+  line-height: 28px;
   text-align: center;
   margin: 0px 10px;
 }
@@ -556,6 +556,9 @@
 .products .images img {
   padding: 20px 10px;
   height: 75px;
+}
+.products .images .pravana {
+  height: 40px;
 }
 
 @media (min-width: 450px) {
