@@ -10,7 +10,7 @@
         flex-direction: column;
         width: 100%;
         margin-top: 100px;
-
+        padding: 0px 5px;
         h3{
             color: $accentColor;
             font-family: "bold";
@@ -27,8 +27,31 @@
             padding-top: 10px;
         }
 
-        .buttons{
+        .contactSection{
+            display: flex;
+
             padding-top: 10px;
+            align-items: center;
+     
+            .fa{
+                font-size: 60px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .phoneNumber{
+                line-height: 22px;
+                b{
+                    color: $accentColor;
+                    font-family: "bold";
+                    letter-spacing: -1px;
+                 
+          
+                }
+                p{
+                    padding-top: 0px;
+                    font-size: 16px;
+                }
+            }
         }
     }
 
@@ -64,9 +87,7 @@
                 width: 400px;
                 padding-top: 10px;
             }
-            .buttons{
-                padding-top: 10px;
-            }
+      
         }
     
 
@@ -95,7 +116,7 @@
                 padding-top: 15px;
                 font-size: 18px;
             }
-            .buttons{
+            .contactSection{
                 padding-top: 15px;
             }
         }
@@ -130,9 +151,7 @@
                 padding-top: 15px;
                 font-size: 18px;
             }
-            .buttons{
-                padding-top: 15px;
-            }
+       
         }
     
         .logo{
@@ -203,7 +222,7 @@
                 padding-top: 20px;
                 font-size: 18px;
             }
-            .buttons{
+            .contactSection{
                 padding-top: 20px;
             }
         }

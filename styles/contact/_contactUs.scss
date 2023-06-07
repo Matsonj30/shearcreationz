@@ -9,79 +9,117 @@
     justify-content: center;
 
     .getInTouch{
-        width: 500px;
-        padding: 20px 5px;
+        width: 100%;
+ 
        
         .disclaimer{
             border-bottom: 3px solid $accentColor;
             padding-bottom: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            padding-top: 3px;
+
+            p{
+                max-width: 600px;
+            }
+            a{
+                text-decoration: none;
+                font-family: "bold";
+                color: $accentColor;
+            }
         }
         .contactDetails{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             .method{
+                padding: 0px 5px;
                 padding-bottom: 15px;
+                width: 310px;
+              
+
+             
                 .fa{
                     text-align: center;
                     width: 35px;
                     margin-left: auto;
                     color: $accentColor;
-                    font-size: 25px;
+                    font-size: 30px;
                 }
                 .fa-map-marker, .fa-phone{
                     font-size: 29px;
                 }
             }
-
+      
             .location{
                 padding-top: 10px;
             }
+            .hours{
+                .specificHours{
+                    width: 100%;
+                    .dayWrapper{
+                        display: flex;
+                    
+                        width: fit-content;
+                        .day{
+                            width: 90px;
+                            
+                        }
+                    }
+
+                    
+                }
+            }
+           
          
         }
     }
 
-    .contactForm{
-        width: 500px;
-        padding: 20px 5px;
-        .contactUs{
-            display: flex;
-            flex-direction: column;
-            form{
-                display: flex;
-                flex-direction: column;
+    // .contactForm{
+    //     width: 500px;
+    //     padding: 20px 5px;
+    //     .contactUs{
+    //         display: flex;
+    //         flex-direction: column;
+    //         form{
+    //             display: flex;
+    //             flex-direction: column;
               
-                border-radius: 10px;
+    //             border-radius: 10px;
 
-                button{
-                  margin-top: 5px;
-                  width: 120px;
-                  height: 50px;
+    //             button{
+    //               margin-top: 5px;
+    //               width: 120px;
+    //               height: 50px;
                   
                
-                }
-                input{
-                    border-radius: 10px;
-                    padding: 5px 5px;
-                    border: 3px solid $black;
-                    margin-bottom: 5px;
-                }
-                input:focus{
-                    outline: none !important;
-                    background-color: $secondaryColor;
-                }
-                #message{
-                    resize: none;
-                    height: 200px;
-                    padding: 5px 5px;
-                    border-radius: 10px;
-                    border: 3px solid $black;
-                }
-                #message:focus{
-                    outline: none !important;
-                    background-color: $secondaryColor;
-                }
-            }
+    //             }
+    //             input{
+    //                 border-radius: 10px;
+    //                 padding: 5px 5px;
+    //                 border: 3px solid $black;
+    //                 margin-bottom: 5px;
+    //             }
+    //             input:focus{
+    //                 outline: none !important;
+    //                 background-color: $secondaryColor;
+    //             }
+    //             #message{
+    //                 resize: none;
+    //                 height: 200px;
+    //                 padding: 5px 5px;
+    //                 border-radius: 10px;
+    //                 border: 3px solid $black;
+    //             }
+    //             #message:focus{
+    //                 outline: none !important;
+    //                 background-color: $secondaryColor;
+    //             }
+    //         }
           
-        }
-    }
+    //     }
+    // }
 }
 
 iframe{
@@ -93,7 +131,24 @@ iframe{
 @media(min-width:1024px){
     .contactUs{
         .getInTouch{
-            padding: 20px 20px;
+            .disclaimer{
+                p{
+                    font-size: 18px;
+                }
+            }
+            .contactDetails{
+                .method{
+                    .fa{
+
+                    }
+                    b{
+                        font-size: 18px;
+                    }
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
         }
         .contactForm{
             padding: 20px 20px;

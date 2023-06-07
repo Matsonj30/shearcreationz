@@ -44,7 +44,10 @@
 }
 
 .buttonDark, .buttonRed {
-  width: 140px;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 0px 15px;
   height: 50px;
   font-family: "bold";
   background-color: transparent;
@@ -85,6 +88,7 @@
   flex-direction: column;
   width: 100%;
   margin-top: 100px;
+  padding: 0px 5px;
 }
 .hero .heroInfo h3 {
   color: #C2272D;
@@ -101,8 +105,27 @@
   font-size: 16px;
   padding-top: 10px;
 }
-.hero .heroInfo .buttons {
+.hero .heroInfo .contactSection {
+  display: flex;
   padding-top: 10px;
+  align-items: center;
+}
+.hero .heroInfo .contactSection .fa {
+  font-size: 60px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.hero .heroInfo .contactSection .phoneNumber {
+  line-height: 22px;
+}
+.hero .heroInfo .contactSection .phoneNumber b {
+  color: #C2272D;
+  font-family: "bold";
+  letter-spacing: -1px;
+}
+.hero .heroInfo .contactSection .phoneNumber p {
+  padding-top: 0px;
+  font-size: 16px;
 }
 .hero .logo {
   height: 50px;
@@ -132,9 +155,6 @@
     width: 400px;
     padding-top: 10px;
   }
-  .hero .heroInfo .buttons {
-    padding-top: 10px;
-  }
 }
 @media (min-width: 850px) {
   .hero .heroInfo {
@@ -155,7 +175,7 @@
     padding-top: 15px;
     font-size: 18px;
   }
-  .hero .heroInfo .buttons {
+  .hero .heroInfo .contactSection {
     padding-top: 15px;
   }
   .hero .logo {
@@ -182,9 +202,6 @@
     width: 400px;
     padding-top: 15px;
     font-size: 18px;
-  }
-  .hero .heroInfo .buttons {
-    padding-top: 15px;
   }
   .hero .logo {
     height: 80px;
@@ -238,7 +255,7 @@
     padding-top: 20px;
     font-size: 18px;
   }
-  .hero .heroInfo .buttons {
+  .hero .heroInfo .contactSection {
     padding-top: 20px;
   }
   .hero .logo {
@@ -653,7 +670,7 @@
 .teamMembers .member img {
   border: 2px solid #C2272D;
   height: 300px;
-  width: auto;
+  width: 242px;
 }
 .teamMembers .member .text {
   padding-top: 20px;
@@ -724,22 +741,40 @@
   justify-content: center;
 }
 .contactUs .getInTouch {
-  width: 500px;
-  padding: 20px 5px;
+  width: 100%;
 }
 .contactUs .getInTouch .disclaimer {
   border-bottom: 3px solid #C2272D;
   padding-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 3px;
+}
+.contactUs .getInTouch .disclaimer p {
+  max-width: 600px;
+}
+.contactUs .getInTouch .disclaimer a {
+  text-decoration: none;
+  font-family: "bold";
+  color: #C2272D;
+}
+.contactUs .getInTouch .contactDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contactUs .getInTouch .contactDetails .method {
+  padding: 0px 5px;
   padding-bottom: 15px;
+  width: 310px;
 }
 .contactUs .getInTouch .contactDetails .method .fa {
   text-align: center;
   width: 35px;
   margin-left: auto;
   color: #C2272D;
-  font-size: 25px;
+  font-size: 30px;
 }
 .contactUs .getInTouch .contactDetails .method .fa-map-marker, .contactUs .getInTouch .contactDetails .method .fa-phone {
   font-size: 29px;
@@ -747,44 +782,16 @@
 .contactUs .getInTouch .contactDetails .location {
   padding-top: 10px;
 }
-.contactUs .contactForm {
-  width: 500px;
-  padding: 20px 5px;
+.contactUs .getInTouch .contactDetails .hours .specificHours {
+  width: 100%;
 }
-.contactUs .contactForm .contactUs {
+.contactUs .getInTouch .contactDetails .hours .specificHours .dayWrapper {
   display: flex;
-  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-.contactUs .contactForm .contactUs form {
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-}
-.contactUs .contactForm .contactUs form button {
-  margin-top: 5px;
-  width: 120px;
-  height: 50px;
-}
-.contactUs .contactForm .contactUs form input {
-  border-radius: 10px;
-  padding: 5px 5px;
-  border: 3px solid #111111;
-  margin-bottom: 5px;
-}
-.contactUs .contactForm .contactUs form input:focus {
-  outline: none !important;
-  background-color: #EDE9E9;
-}
-.contactUs .contactForm .contactUs form #message {
-  resize: none;
-  height: 200px;
-  padding: 5px 5px;
-  border-radius: 10px;
-  border: 3px solid #111111;
-}
-.contactUs .contactForm .contactUs form #message:focus {
-  outline: none !important;
-  background-color: #EDE9E9;
+.contactUs .getInTouch .contactDetails .hours .specificHours .dayWrapper .day {
+  width: 90px;
 }
 
 iframe {
@@ -794,8 +801,14 @@ iframe {
 }
 
 @media (min-width: 1024px) {
-  .contactUs .getInTouch {
-    padding: 20px 20px;
+  .contactUs .getInTouch .disclaimer p {
+    font-size: 18px;
+  }
+  .contactUs .getInTouch .contactDetails .method b {
+    font-size: 18px;
+  }
+  .contactUs .getInTouch .contactDetails .method p {
+    font-size: 18px;
   }
   .contactUs .contactForm {
     padding: 20px 20px;

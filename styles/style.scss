@@ -73,7 +73,9 @@ $black: #111111;
 }
 
 .buttonDark{
-    width: 140px;
+    width: fit-content;
+    white-space: nowrap;
+    padding: 0px 15px;
     height: 50px;
     font-family: "bold";
     background-color: transparent;
