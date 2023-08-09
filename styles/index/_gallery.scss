@@ -12,6 +12,8 @@
 
     img{
         height: 446px;
+        object-fit: cover;
+        width: 100%;
     }
 
     .leftBox{
@@ -28,7 +30,7 @@
         
         h1{
             color: $primaryColor;
-            font-size: 55px;
+            font-size: 45px;
             font-family: "bold";
                 
         }

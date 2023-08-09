@@ -318,7 +318,7 @@
   align-items: center;
 }
 .services .gallerySection .redBox h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-family: "bold";
   color: #fafafa;
   width: 100%;
@@ -329,23 +329,35 @@
   height: 540px;
   border-radius: 0px 73px 0px 0px;
   grid-area: hair1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .services .gallerySection :nth-child(3) {
   width: 350px;
   height: 580px;
   border-radius: 0px 0px 0px 73px;
   grid-area: hair2;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .services .gallerySection :nth-child(4) {
   width: 350px;
   height: 340px;
   border-radius: 0px 0px 73px 0px;
   grid-area: nail1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 500px) {
   .services .gallerySection {
-    zoom: 0.7;
+    zoom: 0.55;
+  }
+}
+@media (min-width: 750px) {
+  .services .gallerySection {
+    zoom: 0.9;
+    margin-top: 50px;
   }
 }
 @media (min-width: 1000px) {
@@ -370,6 +382,8 @@
 .paginator {
   margin-top: 100px;
   width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -419,6 +433,9 @@
   scroll-snap-align: start;
   text-align: center;
   padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .paginator .scrollContainer #imageContainer .testimonial p {
   color: #fafafa;
@@ -501,7 +518,7 @@
 }
 @media (min-width: 1400px) {
   .paginator .scrollContainer #imageContainer {
-    width: 1200px;
+    width: 1100px;
   }
   .paginator .scrollContainer #imageContainer img {
     height: auto;
@@ -509,7 +526,7 @@
   }
 }
 .aboutUs {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -518,7 +535,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 .aboutUs .aboutUsContent .aboutUsText {
   max-width: 600px;
@@ -528,7 +545,14 @@
 }
 .aboutUs .aboutUsContent img {
   width: 320px;
-  padding: 30px 0px;
+  height: 300px;
+  margin: 30px 0px;
+  border: 5px solid #C2272D;
+  border-left: none;
+  border-right: none;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 700px) {
@@ -546,7 +570,8 @@
     font-size: 18px;
   }
   .aboutUs .aboutUsContent img {
-    width: 800px;
+    width: 600px;
+    height: 600px;
   }
 }
 .products {
@@ -594,6 +619,9 @@
 }
 .gallery img {
   height: 446px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 .gallery .leftBox, .gallery .rightBox {
   grid-area: leftbox;
@@ -608,7 +636,7 @@
 }
 .gallery .leftBox h1, .gallery .rightBox h1 {
   color: #fafafa;
-  font-size: 55px;
+  font-size: 45px;
   font-family: "bold";
 }
 .gallery .rightBox {
@@ -665,12 +693,14 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 1500px;
-  padding: 50px 10px;
+  padding: 20px 10px;
 }
 .teamMembers .member img {
   border: 2px solid #C2272D;
   height: 300px;
   width: 242px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .teamMembers .member .text {
   padding-top: 20px;
@@ -687,7 +717,7 @@
 .teamMembers .member .text .namePosition b {
   display: block;
   color: #C2272D;
-  font-size: 12px;
+  font-size: 14px;
   height: 18px;
 }
 .teamMembers .member .text p {

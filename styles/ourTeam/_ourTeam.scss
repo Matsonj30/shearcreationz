@@ -8,13 +8,12 @@
    
         flex-wrap: wrap;
         max-width: 1500px;
-        padding: 50px 10px;
+        padding: 20px 10px;
         img{
             border: 2px solid $accentColor;
             height: 300px;
             width: 242px;
-            
-
+            object-fit: cover;
         }
         
         .text{
@@ -30,7 +29,7 @@
                 b{
                     display: block;
                     color: $accentColor;
-                    font-size: 12px;
+                    font-size: 14px;
                     height: 18px;
                 }
             }
