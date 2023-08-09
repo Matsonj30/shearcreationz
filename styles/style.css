@@ -570,8 +570,8 @@
     font-size: 18px;
   }
   .aboutUs .aboutUsContent img {
-    width: 600px;
-    height: 600px;
+    width: 750px;
+    height: 500px;
   }
 }
 .products {
@@ -764,6 +764,10 @@
   width: fit-content;
 }
 
+.noMarginFooter {
+  margin-top: unset;
+}
+
 .contactUs {
   display: flex;
   flex-wrap: wrap;
@@ -791,13 +795,17 @@
 }
 .contactUs .getInTouch .contactDetails {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
 }
 .contactUs .getInTouch .contactDetails .method {
   padding: 0px 5px;
-  padding-bottom: 15px;
-  width: 310px;
+  padding: 10px 5px;
+  width: 250px;
+}
+.contactUs .getInTouch .contactDetails .method a {
+  text-decoration: none;
 }
 .contactUs .getInTouch .contactDetails .method .fa {
   text-align: center;
@@ -809,8 +817,10 @@
 .contactUs .getInTouch .contactDetails .method .fa-map-marker, .contactUs .getInTouch .contactDetails .method .fa-phone {
   font-size: 29px;
 }
-.contactUs .getInTouch .contactDetails .location {
-  padding-top: 10px;
+.contactUs .getInTouch .contactDetails .location a {
+  text-decoration: none;
+  color: #C2272D;
+  font-family: "bold";
 }
 .contactUs .getInTouch .contactDetails .hours .specificHours {
   width: 100%;
@@ -830,9 +840,20 @@ iframe {
   padding-top: 13px;
 }
 
+@media (min-width: 510px) {
+  .contactUs .getInTouch .contactDetails .method {
+    width: 100%;
+    padding: 10px 25px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 @media (min-width: 1024px) {
   .contactUs .getInTouch .disclaimer p {
     font-size: 18px;
+  }
+  .contactUs .getInTouch .contactDetails .location {
+    max-width: 320px;
   }
   .contactUs .getInTouch .contactDetails .method b {
     font-size: 18px;
