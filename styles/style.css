@@ -391,7 +391,7 @@
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
-  background-image: url("../../images/testimonialBackground.png");
+  background-image: url("../../images/testimonialBackground.webp");
 }
 .paginator .fa-quote-left {
   color: #fafafa;
@@ -576,7 +576,7 @@
 }
 .products {
   margin-top: 100px;
-  background-image: url("../../images/products.png");
+  background-image: url("../../images/products.webp");
   background-size: cover;
   width: 100%;
   min-height: 300px;
