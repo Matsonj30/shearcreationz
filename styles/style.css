@@ -2,11 +2,13 @@
   font-family: "regular";
   font-style: normal;
   src: url(../fonts/Poppins/Poppins-Regular.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: "bold";
   font-style: normal;
   src: url(../fonts/Poppins/Poppins-Bold.ttf);
+  font-display: swap;
 }
 * {
   margin: 0;
